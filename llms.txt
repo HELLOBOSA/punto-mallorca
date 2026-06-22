@@ -1,6 +1,8 @@
 # Punto Reforma Mallorca
 
-> Renovation and carpentry company in Mallorca, Spain. Services include bathroom and kitchen renovation, full renovation, villa renovation, custom carpentry, painting, and project management.
+> Custom carpentry, bathrooms, kitchens, painting and full renovations in Mallorca. Spanish and English-speaking team.
+
+> Puntoreforma: reformas, carpintería a medida, baños, cocinas, pintura y coordinación de obra en Mallorca, en español e inglés. Solicita presupuesto sin compromiso.
 
 ## Contact
 
@@ -11,17 +13,17 @@
 
 ## Pages
 
-- [Home](https://mallorca.puntoreforma.es/): Main page with services, process, gallery and contact form
-- [Punto Reforma Mallorca Blog](https://mallorca.puntoreforma.es/blog/): Renovation guides and articles for Mallorca
+- [Home](https://mallorca.puntoreforma.es/): Services, process, gallery and contact form
+- [Blog](https://mallorca.puntoreforma.es/blog/): Renovation guides and articles for Mallorca
 
 ## Blog Articles
 
-- [Cuánto tarda una reforma en Mallorca](https://mallorca.puntoreforma.es/blog/cuanto-tarda-reforma-mallorca/)
-- [Humedades en Mallorca](https://mallorca.puntoreforma.es/blog/humedades-impermeabilizacion-mallorca/)
-- [Licencias para reformar en Mallorca](https://mallorca.puntoreforma.es/blog/licencias-permisos-reforma-mallorca/)
-- [Precio reforma integral Mallorca 2026](https://mallorca.puntoreforma.es/blog/precio-reforma-integral-mallorca/)
-- [Reforma de baño en Mallorca](https://mallorca.puntoreforma.es/blog/reforma-bano-mallorca/)
-- [Reforma de cocina en Mallorca](https://mallorca.puntoreforma.es/blog/reforma-cocina-mallorca/)
-- [Reformar piso antiguo en Palma](https://mallorca.puntoreforma.es/blog/reformar-piso-antiguo-palma/)
-- [Reformar piso pequeño en Palma](https://mallorca.puntoreforma.es/blog/reformar-piso-pequeno-palma/)
-- [Rehabilitación de fachadas Mallorca](https://mallorca.puntoreforma.es/blog/rehabilitacion-fachadas-mallorca/)
+- [Cuánto tarda una reforma en Mallorca](https://mallorca.puntoreforma.es/blog/cuanto-tarda-reforma-mallorca/): Real renovation timelines in Mallorca by project type: bathroom, kitchen, full flat and exterior works, phases and what causes delays on the island.
+- [Humedades en Mallorca](https://mallorca.puntoreforma.es/blog/humedades-impermeabilizacion-mallorca/): How to diagnose damp, leaks and waterproofing issues in Mallorca properties: causes, solutions and when to call a specialist.
+- [Licencias para reformar en Mallorca](https://mallorca.puntoreforma.es/blog/licencias-permisos-reforma-mallorca/): Comunicación previa and licencia urbanística in Palma and Mallorca: which process applies to your project and how to apply.
+- [Precio reforma integral Mallorca 2026](https://mallorca.puntoreforma.es/blog/precio-reforma-integral-mallorca/): Full renovation costs for a flat or house in Mallorca in 2026: real prices per m², breakdown by trade and what affects the final budget.
+- [Reforma de baño en Mallorca](https://mallorca.puntoreforma.es/blog/reforma-bano-mallorca/): Bathroom renovation in Mallorca: costs, layout options, materials, accessibility upgrades and when a building permit is needed.
+- [Reforma de cocina en Mallorca](https://mallorca.puntoreforma.es/blog/reforma-cocina-mallorca/): Kitchen renovation in Mallorca: best layouts, materials that withstand the island climate, installation and realistic 2026 prices.
+- [Reformar piso antiguo en Palma](https://mallorca.puntoreforma.es/blog/reformar-piso-antiguo-palma/): What to check when renovating an old flat in Palma: structure, wiring, plumbing, damp and heritage building considerations.
+- [Reformar piso pequeño en Palma](https://mallorca.puntoreforma.es/blog/reformar-piso-pequeno-palma/): How to renovate a small flat in Palma with better layout, more storage and modern design without losing square metres.
+- [Rehabilitación de fachadas Mallorca](https://mallorca.puntoreforma.es/blog/rehabilitacion-fachadas-mallorca/): Guide for communities in Mallorca on facade, roof and terrace rehabilitation: permits, subsidies, technical project requirements and timelines.
