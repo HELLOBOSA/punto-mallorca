@@ -331,7 +331,7 @@ body.no-motion .marquee-track { animation: none; }
 .marquee-track .grp { display: inline-flex; align-items: center; }
 .marquee-item { font-family:'Bricolage Grotesque',sans-serif; font-weight: 600; font-size: clamp(1.3rem, 2.6vw, 2.1rem); letter-spacing: -0.03em; padding: 0; display: inline-flex; align-items: center; gap: 0; }
 .marquee-item::after { content: "✶"; color: var(--accent); font-size: .7em; margin: 0 26px; }
-@keyframes marq { to { transform: translateX(-50%); } }
+@keyframes marq { to { transform: translateX(calc(-1 * var(--marquee-shift, 50%))); } }
 
 /* ---------- services (expanding list) ---------- */
 .svc-list { border-top: 1px solid var(--line); }
@@ -1052,17 +1052,40 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
   /* ---------- i18n ---------- */
   var LS_LANG = 'puntoreforma_lang';
   var langButtons = document.querySelectorAll('.lang [data-lang]');
-  function setLang(lang) {
-    var isEn = lang === 'en';
-    document.documentElement.lang = isEn ? 'en' : 'es';
-    document.querySelectorAll('[data-en]').forEach(function (el) {
+  var mq = document.getElementById('marquee');
+  var mqSeed = mq && mq.firstElementChild ? mq.firstElementChild.cloneNode(true) : null;
+  function localizeScope(scope, isEn) {
+    scope.querySelectorAll('[data-en]').forEach(function (el) {
       if (el.dataset.sv === undefined) el.dataset.sv = el.innerHTML;
       el.innerHTML = isEn ? el.dataset.en : el.dataset.sv;
     });
+  }
+  function setupMarquee(lang) {
+    if (!mq || !mqSeed) return;
+    var isEn = lang === 'en';
+    mq.innerHTML = '';
+    mq.style.animation = 'none';
+    mq.appendChild(mqSeed.cloneNode(true));
+    localizeScope(mq, isEn);
+    var firstGroup = mq.firstElementChild;
+    var groupWidth = firstGroup ? firstGroup.getBoundingClientRect().width : 0;
+    if (!groupWidth) return;
+    while (mq.scrollWidth < window.innerWidth + groupWidth) {
+      mq.appendChild(mqSeed.cloneNode(true));
+      localizeScope(mq.lastElementChild, isEn);
+    }
+    mq.style.setProperty('--marquee-shift', groupWidth + 'px');
+    mq.style.animation = '';
+  }
+  function setLang(lang) {
+    var isEn = lang === 'en';
+    document.documentElement.lang = isEn ? 'en' : 'es';
+    localizeScope(document, isEn);
     document.querySelectorAll('[data-ph]').forEach(function (el) {
       el.placeholder = isEn ? (el.dataset.enPh || el.dataset.ph) : el.dataset.ph;
     });
     langButtons.forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+    setupMarquee(lang);
     try { localStorage.setItem(LS_LANG, lang); } catch (e) {}
   }
   langButtons.forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
@@ -1070,11 +1093,9 @@ body.no-motion .hero-r .badge .pulse::after, body.no-motion .scroll-cue .ln::aft
   try { saved = localStorage.getItem(LS_LANG) || 'es'; } catch (e) {}
   setLang(saved);
 
-  /* ---------- marquee seamless loop ---------- */
-  var mq = document.getElementById('marquee');
-  if (mq && mq.firstElementChild) {
-    mq.appendChild(mq.firstElementChild.cloneNode(true));
-  }
+  window.addEventListener('resize', function () {
+    setupMarquee(document.documentElement.lang === 'en' ? 'en' : document.documentElement.lang);
+  }, { passive: true });
 
   /* ---------- nav scroll state + progress bar ---------- */
   var nav = document.getElementById('nav');
